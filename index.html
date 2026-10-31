@@ -4,6 +4,17 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Shadha Shareef // CS Student &amp; Aspiring Software Developer</title>
+<meta name="description" content="Portfolio of Shadha Shareef, a Computer Science student and aspiring software developer from Kerala, India. Explore projects, skills, and contact details."/>
+<meta name="author" content="Shadha Shareef"/>
+<meta name="theme-color" content="#051424"/>
+<link rel="canonical" href="https://ShadhaShareef.github.io/portfolio-template/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Shadha Shareef // CS Student &amp; Aspiring Software Developer"/>
+<meta property="og:description" content="Portfolio of Shadha Shareef, a Computer Science student and aspiring software developer from Kerala, India."/>
+<meta property="og:url" content="https://ShadhaShareef.github.io/portfolio-template/"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Shadha Shareef // CS Student &amp; Aspiring Software Developer"/>
+<meta name="twitter:description" content="Portfolio of Shadha Shareef, a Computer Science student and aspiring software developer from Kerala, India."/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Syne:ital,wght@0,600;0,700;0,800;1,600;1,700&amp;display=swap" rel="stylesheet"/>
@@ -92,6 +103,7 @@
   </script>
 </head>
 <body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<a class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:bg-primary-container focus:text-on-primary-container focus:rounded-lg font-label-code text-xs font-bold uppercase" href="#main">Skip to content</a>
 <!-- NAVIGATION BAR -->
 <header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl border-b border-surface-container-highest/60 shadow-[0_1px_16px_rgba(0,0,0,0.5)]">
 <div class="h-20 w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg flex items-center justify-between gap-space-lg">
@@ -136,10 +148,25 @@
 <span class="material-symbols-outlined text-[16px]">description</span>
 <span>Resume (PDF)</span>
 </a>
+<button aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation menu" class="lg:hidden p-2 text-on-surface-variant hover:text-primary-fixed hover:bg-surface-container rounded-lg transition-colors" id="navToggle" type="button">
+<span class="material-symbols-outlined text-[22px]">menu</span>
+</button>
 </div>
+</div>
+<!-- MOBILE NAV MENU -->
+<div class="hidden lg:hidden border-t border-surface-container-highest/60 bg-surface/95 backdrop-blur-xl" id="mobileMenu">
+<nav class="max-w-[1560px] mx-auto px-6 md:px-margin-lg py-3 grid grid-cols-2 gap-2">
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-primary-fixed bg-surface-container-high border border-primary-fixed/20 transition-colors" href="#about">01//Ethos</a>
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#projects">02//Projects</a>
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#repertoire">03//Repertoire</a>
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#workbench">04//Workbench</a>
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#terminal">05//Console</a>
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#milestones">06//Journey</a>
+<a class="px-3.5 py-2 rounded-lg font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" href="#contact">07//Contact</a>
+</nav>
 </div>
 </header>
-<main class="w-full pt-20 bg-background min-h-screen">
+<main class="w-full pt-20 bg-background min-h-screen" id="main">
 <!-- HERO SECTION: SYNTHESIS OF KINETIC PLAYGROUND + EDITORIAL HERO -->
 <section class="relative w-full overflow-hidden border-b border-surface-container-high/60 grid-bg pt-10 pb-space-3xl">
 <!-- AMBIENT ACCENTS -->
@@ -1239,7 +1266,28 @@
   })();
 
   // ==========================================
-  // 2. EMAIL CLIPBOARD COPY
+  // 2. MOBILE NAVIGATION
+  // ==========================================
+  (function initMobileNav() {
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (!toggle || !menu) return;
+
+    const setOpen = (open) => {
+      menu.classList.toggle('hidden', !open);
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.querySelector('.material-symbols-outlined').textContent = open ? 'close' : 'menu';
+    };
+
+    toggle.addEventListener('click', () => setOpen(menu.classList.contains('hidden')));
+    menu.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => setOpen(false)));
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) setOpen(false);
+    });
+  })();
+
+  // ==========================================
+  // 3. EMAIL CLIPBOARD COPY
   // ==========================================
   function copyEmailToClipboard() {
     const email = 'shadhashareef05@gmail.com';
@@ -1264,17 +1312,24 @@
   }
 
   // ==========================================
-  // 3. STUDENT REPL / TERMINAL SIMULATOR
+  // 4. STUDENT REPL / TERMINAL SIMULATOR
   // ==========================================
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>"']/g, (c) => (
+      { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]
+    ));
+  }
+
   function appendTerminalMessage(role, text) {
     const output = document.getElementById('terminalOutput');
     const row = document.createElement('div');
     row.className = 'flex items-start gap-2 text-on-surface';
+    const safeText = escapeHtml(text);
 
     if (role === 'cmd') {
-      row.innerHTML = `<span class="text-primary-fixed font-bold">&lambda;</span><span class="text-primary-fixed font-semibold">${text}</span>`;
+      row.innerHTML = `<span class="text-primary-fixed font-bold">&lambda;</span><span class="text-primary-fixed font-semibold">${safeText}</span>`;
     } else {
-      row.innerHTML = `<span class="text-outline">&gt;</span><span class="text-on-surface-variant">${text}</span>`;
+      row.innerHTML = `<span class="text-outline">&gt;</span><span class="text-on-surface-variant">${safeText}</span>`;
     }
 
     output.appendChild(row);
