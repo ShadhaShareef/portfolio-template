@@ -1,19 +1,48 @@
 {
-    "name": "Your Name",
-    "tagline": "Your one-line introduction",
-    "bio": "Write 2 or 3 sentences about yourself.",
+    "name": "Shadha Shareef",
+    "tagline": "Full Stack Developer & Creative Problem Solver",
+    "bio": "I am an aspiring developer with a keen eye for design and a drive to create innovative solutions, combining logic and creativity to build clean, responsive interfaces. Outside of coding, I enjoy learning new technologies, experimenting with tools, and exploring ideas to understand how things work. I focus on writing clean, maintainable code and continually improving my skills.",
     "skills": [
-        "Git",
-        "HTML"
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Python",
+        "C",
+        "Java",
+        "spaCy",
+        "pdfplumber",
+        "SQLite"
     ],
     "projects": [
         {
-            "title": "My first project",
-            "desc": "What it does.",
-            "link": "https://github.com/yourname"
+            "title": "Edusphere Plus",
+            "desc": "A Java-based learning platform where students and teachers can upload and access notes, videos, and quizzes. Users can search content by subject, rate and comment on it, and take practice quizzes.",
+            "link": "https://github.com/ShadhaShareef/Edusphere"
+        },
+        {
+            "title": "Career Recommendation System",
+            "desc": "A machine learning system that evaluates how well a candidate's resume matches a given job description by analyzing skills, experience, and keywords to compute an eligibility score and highlight gaps.",
+            "link": "https://github.com/ShadhaShareef/Career-Recommendation-System"
+        },
+        {
+            "title": "StreetSpeak",
+            "desc": "A citizen-driven platform for reporting road and transportation issues with location and media support, enabling transparent issue tracking and resolution by authorities.",
+            "link": "https://github.com/ShadhaShareef/StreetSpeaks"
+        },
+        {
+            "title": "EQShare",
+            "desc": "A math-driven collaboration platform that ensures fair workload distribution in group projects by modeling task complexity, urgency, and individual contribution through explainable metrics.",
+            "link": "https://github.com/ShadhaShareef/Enchanto"
+        },
+        {
+            "title": "Swipe in the Wild",
+            "desc": "A playful, forest-themed swipe experience inspired by dating apps and reimagined in cozy pixel art, with quirky animal characters and a light narrative.",
+            "link": "https://github.com/ShadhaShareef/Swipe-in-the-Wild"
         }
     ],
     "links": {
-        "github": "https://github.com/yourname"
+        "github": "https://github.com/ShadhaShareef",
+        "linkedin": "https://linkedin.com/in/shadhashareef05"
     }
 }

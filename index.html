@@ -1,35 +1,1334 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shadha Shareef // CS Student &amp; Aspiring Software Developer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Syne:ital,wght@0,600;0,700;0,800;1,600;1,700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body { margin: 0; padding: 0; scroll-behavior: smooth; }
+      body { overscroll-behavior: none; }
+      ::-webkit-scrollbar { width: 6px; }
+      ::-webkit-scrollbar-track { background: #051424; }
+      ::-webkit-scrollbar-thumb { background: #1c2b3c; border-radius: 3px; }
+      ::-webkit-scrollbar-thumb:hover { background: #c3f400; }
+    }
+    .grid-bg {
+      background-size: 32px 32px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#ffffff",
+            "primary-container": "#c3f400",
+            "on-primary-container": "#161e00",
+            "primary-fixed": "#c3f400",
+            "primary-fixed-dim": "#abd600",
+            "secondary": "#ddb7ff",
+            "secondary-container": "#1e1b4b",
+            "on-secondary-container": "#ddb7ff",
+            "tertiary": "#7bd0ff",
+            "tertiary-container": "#00354a",
+            "background": "#051424",
+            "surface": "#051424",
+            "surface-dim": "#030c17",
+            "surface-container-lowest": "#010811",
+            "surface-container-low": "#091726",
+            "surface-container": "#0e2033",
+            "surface-container-high": "#162a42",
+            "surface-container-highest": "#223954",
+            "on-surface": "#d4e4fa",
+            "on-surface-variant": "#94a3b8",
+            "outline": "#64748b",
+            "outline-variant": "#1e334d",
+            "error": "#ffb4ab",
+            "error-container": "#93000a"
+          },
+          fontFamily: {
+            "display-hero": ["Syne", "sans-serif"],
+            "headline-xl": ["Syne", "sans-serif"],
+            "headline-lg": ["Syne", "sans-serif"],
+            "headline-md": ["Syne", "sans-serif"],
+            "body-xl": ["Plus Jakarta Sans", "sans-serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-code": ["JetBrains Mono", "monospace"],
+            "label-status": ["JetBrains Mono", "monospace"],
+            "label-badge": ["JetBrains Mono", "monospace"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "2xl": "1rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.25rem",
+            "space-sm": "0.5rem",
+            "space-md": "1rem",
+            "space-lg": "1.5rem",
+            "space-xl": "2.5rem",
+            "space-2xl": "4rem",
+            "space-3xl": "6rem",
+            "margin-lg": "2rem",
+            "gutter-lg": "1.75rem"
+          }
+        }
+      }
+    };
+  </script>
 </head>
+<body class="bg-background font-body-md text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- NAVIGATION BAR -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/85 backdrop-blur-xl border-b border-surface-container-highest/60 shadow-[0_1px_16px_rgba(0,0,0,0.5)]">
+<div class="h-20 w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg flex items-center justify-between gap-space-lg">
+<!-- BRAND / IDENTITY -->
+<div class="flex items-center gap-space-md">
+<a class="flex items-center gap-space-sm group text-left" href="#">
+<span class="font-display-hero text-2xl font-extrabold tracking-tight text-primary group-hover:text-primary-fixed transition-colors">SS // DEV</span>
+<span class="hidden xl:inline-block font-label-code text-xs text-on-surface-variant/70 border-l border-surface-container-highest pl-2">[CS_STUDENT]</span>
+</a>
+<div class="h-5 w-px bg-surface-container-highest hidden sm:block"></div>
+<!-- ACCURATE HONEST STATUS -->
+<div class="hidden sm:flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-high/80 border border-primary-fixed/20 shadow-[0_0_12px_rgba(195,244,0,0.15)]">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-primary-fixed"></span>
+</span>
+<span class="font-label-status text-[11px] uppercase text-primary-fixed tracking-wider font-semibold">Open for SWE Roles 2025</span>
+</div>
+</div>
+<!-- NARRATIVE CHAPTER NAV -->
+<nav class="hidden lg:flex items-center gap-1 bg-surface-container-lowest/80 px-2 py-1.5 rounded-full border border-surface-container-high shadow-inner">
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-primary-fixed bg-surface-container-high border border-primary-fixed/20 transition-all hover:text-white" href="#about">01//Ethos</a>
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="#projects">02//Projects</a>
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="#repertoire">03//Repertoire</a>
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="#workbench">04//Workbench</a>
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="#terminal">05//Console</a>
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="#milestones">06//Journey</a>
+<a class="px-3.5 py-1 rounded-full font-label-code text-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-all" href="#contact">07//Contact</a>
+</nav>
+<!-- RIGHT ACTION PILLS -->
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1">
+<a aria-label="GitHub Profile" class="p-2 text-on-surface-variant hover:text-primary-fixed transition-colors rounded-lg hover:bg-surface-container" href="https://github.com/ShadhaShareef" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+<a aria-label="LinkedIn Profile" class="p-2 text-on-surface-variant hover:text-primary-fixed transition-colors rounded-lg hover:bg-surface-container" href="https://linkedin.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</a>
+</div>
+<div class="h-5 w-px bg-surface-container-highest hidden sm:block"></div>
+<a class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-badge text-xs font-bold tracking-wider hover:bg-primary-fixed-dim transition-all shadow-[0_0_18px_rgba(195,244,0,0.3)]" href="#contact">
+<span class="material-symbols-outlined text-[16px]">description</span>
+<span>Resume (PDF)</span>
+</a>
+</div>
+</div>
+</header>
+<main class="w-full pt-20 bg-background min-h-screen">
+<!-- HERO SECTION: SYNTHESIS OF KINETIC PLAYGROUND + EDITORIAL HERO -->
+<section class="relative w-full overflow-hidden border-b border-surface-container-high/60 grid-bg pt-10 pb-space-3xl">
+<!-- AMBIENT ACCENTS -->
+<div class="absolute -top-32 left-1/4 w-[600px] h-[350px] bg-primary-fixed/10 blur-[130px] pointer-events-none rounded-full"></div>
+<div class="absolute top-28 right-10 w-[450px] h-[350px] bg-secondary/10 blur-[140px] pointer-events-none rounded-full"></div>
+<div class="max-w-[1560px] mx-auto px-6 md:px-margin-lg">
+<!-- TOP HUD CONCEPT METADATA -->
+<div class="flex flex-wrap items-center justify-between gap-space-md mb-space-lg pb-space-sm border-b border-surface-container-highest/40">
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary-fixed font-label-code text-[11px] font-semibold uppercase tracking-wider">
+            STUDENT_ID // SS-25-UNDERGRAD
+          </span>
+<span class="text-outline font-label-code text-xs">::</span>
+<span class="font-label-code text-xs text-on-surface-variant">Calicut, Kerala, India</span>
+</div>
+<div class="flex items-center gap-space-md font-label-code text-xs text-on-surface-variant/80">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> CANDIDATE: B.TECH CSE (2025/2026)</span>
+<span class="hidden sm:inline text-outline">•</span>
+<span class="hidden sm:inline">SYNTHESIS: PLAYGROUND × JOURNAL × OS</span>
+</div>
+</div>
+<!-- MAIN HERO GRID (TYPOGRAPHIC COMPOSITION + INTERACTIVE KINETIC SANDBOX) -->
+<div class="grid grid-cols-12 gap-gutter-lg items-center">
+<!-- LEFT EDITORIAL INTRO -->
+<div class="col-span-12 lg:col-span-7 flex flex-col justify-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-low border border-surface-container-highest w-fit mb-5">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-status text-[11px] uppercase tracking-wider text-secondary">Computer Science Student // Aspiring Software Developer</span>
+</div>
+<h1 class="font-display-hero text-5xl sm:text-7xl xl:text-[84px] font-extrabold uppercase tracking-tight text-primary leading-[0.95] select-none">
+            SHADHA <span class="italic font-normal text-primary-fixed tracking-normal drop-shadow-[0_0_35px_rgba(195,244,0,0.3)]">Shareef</span>
+</h1>
+<p class="font-headline-md text-xl sm:text-2xl text-on-surface font-light mt-6 max-w-2xl leading-snug">
+<span class="text-primary-fixed font-semibold">“Building useful things</span> through code, creativity, and curiosity.”
+          </p>
+<p class="font-body-lg text-base sm:text-lg text-on-surface-variant max-w-xl mt-3 leading-relaxed">
+            Undergraduate software builder grounded in core data structures, pragmatic web APIs, and responsive human interfaces. Eager to contribute to collaborative engineering teams.
+          </p>
+<!-- DIRECT CTAS & BADGES -->
+<div class="flex flex-wrap items-center gap-4 mt-8">
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-primary-container text-on-primary-container font-label-code text-xs font-bold uppercase tracking-wider hover:bg-primary-fixed-dim transition-all shadow-[0_0_24px_rgba(195,244,0,0.35)] group" href="#projects">
+<span>EXPLORE PROJECTS</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-y-0.5 transition-transform">south</span>
+</a>
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code text-xs font-semibold uppercase tracking-wider border border-surface-container-highest transition-all" href="#workbench">
+<span class="material-symbols-outlined text-[18px] text-secondary">dashboard_customize</span>
+<span>STUDENT WORKBENCH</span>
+</a>
+<!-- SOCIAL NODES -->
+<div class="flex items-center gap-2 pl-2">
+<a class="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-primary-fixed transition-colors border border-surface-container-high" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+<a class="p-2.5 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface-variant hover:text-secondary transition-colors border border-surface-container-high" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</a>
+</div>
+</div>
+<!-- STATUS TICKER -->
+<div class="mt-8 flex items-center gap-3 pt-6 border-t border-surface-container-high/60 text-xs font-label-code text-on-surface-variant">
+<span class="flex items-center gap-1.5 text-primary-fixed font-medium">
+<span class="w-2 h-2 rounded-full bg-primary-fixed animate-ping"></span>
+              2025 INTERNSHIP SEEKING
+            </span>
+<span>•</span>
+<span>Focus: Full-Stack Web, React, Node.js, Python</span>
+</div>
+</div>
+<!-- RIGHT KINETIC INTERACTIVE SANDBOX WIDGET -->
+<div class="col-span-12 lg:col-span-5">
+<div class="relative rounded-2xl bg-surface-container-low border border-surface-container-highest p-5 shadow-2xl backdrop-blur-md overflow-hidden group">
+<!-- WIDGET HEADER -->
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-surface-container-highest/60">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/70"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim/70"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed/70"></span>
+<span class="ml-2 font-label-code text-xs text-primary-fixed font-semibold tracking-wider">THE_BUILDERS_SANDBOX.TS</span>
+</div>
+<span class="font-label-status text-[10px] text-outline uppercase tracking-wider">INTERACTIVE REACTION</span>
+</div>
+<!-- CANVAS INTERACTION AREA -->
+<div class="relative w-full h-[320px] rounded-xl bg-surface-container-lowest overflow-hidden border border-surface-container-high cursor-crosshair">
+<canvas class="w-full h-full block" id="sandboxCanvas"></canvas>
+<div class="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none text-[11px] font-label-code text-on-surface-variant/80 bg-surface-container-lowest/80 px-3 py-1.5 rounded-lg border border-surface-container-high">
+<span class="flex items-center gap-1 text-primary-fixed">
+<span class="material-symbols-outlined text-[14px]">touch_app</span> Move or tap inside to connect nodes
+                </span>
+<span class="text-secondary font-mono" id="particleCounter">18 NODES</span>
+</div>
+</div>
+<!-- MINI METRIC FOOTER -->
+<div class="mt-4 grid grid-cols-3 gap-2 text-center font-label-code text-xs">
+<div class="p-2 rounded bg-surface-container">
+<span class="block text-[10px] text-outline uppercase">Curiosity</span>
+<span class="text-primary-fixed font-bold">Continuous</span>
+</div>
+<div class="p-2 rounded bg-surface-container">
+<span class="block text-[10px] text-outline uppercase">Approach</span>
+<span class="text-secondary font-bold">First Principles</span>
+</div>
+<div class="p-2 rounded bg-surface-container">
+<span class="block text-[10px] text-outline uppercase">Target</span>
+<span class="text-on-surface font-bold">Grad 2025/26</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 01: ORIGINS & ENGINEERING ETHOS (EDITORIAL ASYMMETRIC) -->
+<section class="w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg py-space-3xl" id="about">
+<!-- CHAPTER HEADER -->
+<div class="flex items-center gap-space-md mb-space-2xl">
+<span class="px-3.5 py-1 rounded-full bg-surface-container font-label-code text-xs text-primary-fixed uppercase tracking-wider font-semibold">
+        CHAPTER 01 // ORIGINS &amp; ETHOS
+      </span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+<span class="font-label-code text-xs text-on-surface-variant uppercase tracking-wider">CANDIDATE PERSPECTIVE</span>
+</div>
+<div class="grid grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT AVATAR & DEV IDENTITY BADGE -->
+<div class="col-span-12 lg:col-span-4">
+<div class="rounded-2xl bg-surface-container-low border border-surface-container-highest p-6 shadow-xl relative overflow-hidden">
+<div class="relative w-full aspect-square rounded-xl bg-gradient-to-br from-surface-container-high via-surface-container to-surface-container-lowest border border-surface-container-highest flex flex-col items-center justify-center p-6 text-center overflow-hidden group">
+<!-- ABSTRACT GEOMETRIC DEVELOPER MONOGRAM -->
+<div class="w-24 h-24 rounded-2xl bg-secondary-container/80 border-2 border-secondary flex items-center justify-center mb-4 shadow-[0_0_30px_rgba(221,183,255,0.25)] group-hover:scale-105 transition-transform">
+<span class="font-display-hero text-4xl font-extrabold text-secondary">SS</span>
+</div>
+<h3 class="font-headline-md text-xl font-bold text-primary">Shadha Shareef</h3>
+<p class="font-label-code text-xs text-secondary mt-1">CS Undergraduate • Developer</p>
+<div class="mt-4 flex items-center gap-2 font-label-code text-[11px] text-on-surface-variant bg-surface-container-lowest px-3 py-1 rounded-full border border-surface-container-high">
+<span class="material-symbols-outlined text-[14px] text-primary-fixed">location_on</span>
+<span>11.2588° N, 75.7804° E // Kerala, IN</span>
+</div>
+<!-- CORNER ACCENT TICKS -->
+<span class="absolute top-2 left-2 font-label-code text-[9px] text-outline">SYS::ORIGIN</span>
+<span class="absolute bottom-2 right-2 font-label-code text-[9px] text-outline">DEV_ID_2025</span>
+</div>
+<!-- BRIEF BIO BULLETS -->
+<div class="mt-5 space-y-2.5 font-label-code text-xs text-on-surface-variant">
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-highest/60">
+<span class="text-outline">Major</span>
+<span class="text-on-surface font-semibold">Computer Science &amp; Engg</span>
+</div>
+<div class="flex items-center justify-between pb-2 border-b border-surface-container-highest/60">
+<span class="text-outline">Degree Track</span>
+<span class="text-on-surface font-semibold">B.Tech (Senior Student)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-outline">Preferred Focus</span>
+<span class="text-primary-fixed font-semibold">Full Stack &amp; Web Interfaces</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT STORYTELLING NARRATIVE & 2 ETHOS PILLARS -->
+<div class="col-span-12 lg:col-span-8 flex flex-col gap-6">
+<div>
+<h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl font-bold text-primary tracking-tight leading-tight">
+            Balancing algorithmic fundamentals with <span class="text-primary-fixed underline decoration-primary-fixed/40 decoration-wavy decoration-1">joyful, practical interfaces</span>.
+          </h2>
+<p class="font-body-lg text-base sm:text-lg text-on-surface-variant mt-5 leading-relaxed">
+            I fell in love with software development through the thrill of solving everyday student friction. From turning confusing paper hall requisitions into a structured digital calendar to helping peers share peer-reviewed study notes before university exams, code has always been my tool for making life noticeably better.
+          </p>
+<p class="font-body-md text-base text-on-surface-variant mt-3 leading-relaxed">
+            As a computer science student, I spend equal time dissecting data structures and database normal forms as I do refining component states, micro-interactions, and responsive typography. I don’t believe in cargo-culting abstractions—I like knowing how the pieces connect end-to-end.
+          </p>
+</div>
+<!-- 2 THOUGHTFUL PHILOSOPHICAL PILLARS (EDITORIAL CARDS) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+<!-- PILLAR 01 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest hover:border-primary-fixed/40 transition-all group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-xs text-primary-fixed font-bold tracking-widest">[01] READABILITY</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary-fixed transition-colors text-[22px]">code_blocks</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary mb-2">Clarity Over Cleverness</h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Code is read ten times more often than it is written. I strive for clean function naming, deterministic error boundaries, and straightforward logic that another teammate—or my future self—can inspect without a headache.
+            </p>
+</div>
+<!-- PILLAR 02 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest hover:border-secondary/40 transition-all group">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-code text-xs text-secondary font-bold tracking-widest">[02] ITERATION</span>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary transition-colors text-[22px]">build</span>
+</div>
+<h3 class="font-headline-md text-lg font-bold text-primary mb-2">Build to Truly Learn</h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Reading lecture slides on SQL concurrency or RESTful idempotency is one thing; building a system where two college clubs attempt to book the same hall at the same time is where theoretical CS truly crystallizes.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 02: REIMAGINED SELECTED PROJECTS (THREE DISTINCT BESPOKE LAYOUTS) -->
+<section class="w-full bg-surface-container-lowest/80 border-y border-surface-container-high/60 py-space-3xl" id="projects">
+<div class="max-w-[1560px] mx-auto px-6 md:px-margin-lg">
+<!-- CHAPTER HEADER -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg mb-space-2xl">
+<div>
+<div class="flex items-center gap-space-sm mb-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-fixed"></span>
+<span class="font-label-code text-xs uppercase tracking-wider text-primary-fixed font-semibold">CHAPTER 02 // PRACTICAL BUILDS</span>
+</div>
+<h2 class="font-headline-xl text-3xl sm:text-4xl lg:text-5xl text-primary font-bold">Selected Projects</h2>
+</div>
+<p class="font-label-code text-xs text-on-surface-variant max-w-md">
+          Realistic, student-driven solutions created to solve actual campus needs and personal technical curiosities.
+        </p>
+</div>
+<div class="space-y-12">
+<!-- ================================================================ -->
+<!-- PROJECT 1: EDUSPHERE (WIDE SPLIT EDITORIAL HERO LAYOUT) -->
+<!-- ================================================================ -->
+<article class="rounded-2xl bg-surface-container-low border border-surface-container-highest overflow-hidden shadow-2xl hover:border-primary-fixed/30 transition-all">
+<div class="grid grid-cols-12 items-stretch">
+<!-- LEFT EDITORIAL NARRATIVE & METRICS -->
+<div class="col-span-12 lg:col-span-7 p-6 sm:p-8 lg:p-10 flex flex-col justify-between">
+<div>
+<div class="flex flex-wrap items-center gap-3 mb-4">
+<span class="px-3 py-0.5 rounded-full bg-primary-fixed/10 text-primary-fixed border border-primary-fixed/20 font-label-code text-xs font-semibold">
+                    PROJECT 01 // STUDY PLATFORM
+                  </span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">COLLABORATIVE ACADEMIC HUB</span>
+</div>
+<h3 class="font-headline-xl text-2xl sm:text-4xl font-extrabold text-primary mb-3">
+                  EduSphere — Peer-to-Peer Study Hub &amp; Quiz Engine
+                </h3>
+<!-- PROBLEM & SOLUTION HONEST BREAKDOWN -->
+<div class="space-y-3 mt-4 text-sm text-on-surface-variant">
+<div class="p-3.5 rounded-lg bg-surface-container border border-surface-container-high">
+<span class="font-label-code text-xs text-secondary font-bold uppercase tracking-wider block mb-1">The Friction &amp; Problem:</span>
+<p class="font-body-md text-on-surface-variant">
+                      Classmates relied on chaotic messaging threads where verified lecture notes were buried, test schedules were forgotten, and finding reliable scholarship deadlines took hours of manual web scraping.
+                    </p>
+</div>
+<div class="p-3.5 rounded-lg bg-surface-container border border-surface-container-high">
+<span class="font-label-code text-xs text-primary-fixed font-bold uppercase tracking-wider block mb-1">Student Solution:</span>
+<p class="font-body-md text-on-surface-variant">
+                      Designed a centralized web platform featuring structured course-tagged Markdown notes, timed peer quiz generation for exam prep, and an indexed scholarship notice board.
+                    </p>
+</div>
+</div>
+<!-- SHADHA'S SPECIFIC ROLE -->
+<div class="mt-4 pt-3 border-t border-surface-container-highest/60 font-label-code text-xs">
+<span class="text-outline uppercase">Shadha's Core Role:</span>
+<span class="text-on-surface ml-1 font-medium">Full-stack relational schema (PostgreSQL), REST endpoints in Express, interactive quiz state machine in React.</span>
+</div>
+<!-- TECH STACK BADGES -->
+<div class="flex flex-wrap gap-2 mt-5">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary-fixed font-label-code text-xs font-medium">React</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">Node.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">Express</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">PostgreSQL</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">Tailwind CSS</span>
+</div>
+</div>
+<!-- ACTION LINKS -->
+<div class="flex items-center gap-4 mt-8 pt-4 border-t border-surface-container-highest/60">
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-primary-container text-on-primary-container font-label-code text-xs font-bold uppercase tracking-wider hover:bg-primary-fixed-dim transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>LIVE DEMO</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-code text-xs font-medium uppercase tracking-wider transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GITHUB REPO</span>
+</a>
+</div>
+</div>
+<!-- RIGHT INTERACTIVE UI MOCK PREVIEW -->
+<div class="col-span-12 lg:col-span-5 bg-surface-container p-6 sm:p-8 flex flex-col justify-center border-t lg:border-t-0 lg:border-l border-surface-container-highest">
+<div class="rounded-xl bg-surface-container-lowest border border-surface-container-high p-4 shadow-xl">
+<!-- MOCK WINDOW HEADER -->
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-surface-container-high">
+<span class="font-label-code text-[11px] text-on-surface-variant">edusphere.internal/app/quiz-view</span>
+<span class="px-2 py-0.5 rounded bg-primary-fixed/20 text-primary-fixed font-label-status text-[10px]">CAMPUS_BETA</span>
+</div>
+<!-- MOCK INTERFACE COMPONENT -->
+<div class="space-y-3">
+<div class="p-3 rounded-lg bg-surface-container-low border border-surface-container-high">
+<div class="flex items-center justify-between text-xs font-label-code mb-1">
+<span class="text-primary-fixed">CS304: Database Systems</span>
+<span class="text-outline">Q 04/10</span>
+</div>
+<p class="text-xs text-on-surface font-medium">Which normalization form removes transitive dependencies?</p>
+</div>
+<div class="space-y-1.5 font-label-code text-xs">
+<div class="p-2 rounded bg-surface-container text-on-surface-variant flex items-center justify-between">
+<span>A. First Normal Form (1NF)</span>
+<span class="text-outline">--</span>
+</div>
+<div class="p-2 rounded bg-primary-fixed/15 border border-primary-fixed/40 text-primary-fixed flex items-center justify-between font-semibold">
+<span>B. Third Normal Form (3NF)</span>
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+</div>
+<div class="p-2 rounded bg-surface-container text-on-surface-variant flex items-center justify-between">
+<span>C. Boyce-Codd (BCNF)</span>
+<span class="text-outline">--</span>
+</div>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-surface-container-high flex items-center justify-between text-[11px] font-label-code text-on-surface-variant">
+<span>Collaborators: 4 peers online</span>
+<span class="text-secondary">Markdown Sync: Active</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- ================================================================ -->
+<!-- PROJECT 2: EVENTRA (HIGH-DENSITY CALENDAR & WORKFLOW INSPECTOR LAYOUT) -->
+<!-- ================================================================ -->
+<article class="rounded-2xl bg-surface-container-low border border-surface-container-highest overflow-hidden shadow-2xl hover:border-secondary/30 transition-all">
+<div class="p-6 sm:p-8 lg:p-10">
+<div class="flex flex-wrap items-center justify-between gap-4 pb-4 mb-6 border-b border-surface-container-highest/60">
+<div class="flex items-center gap-3">
+<span class="px-3 py-0.5 rounded-full bg-secondary/10 text-secondary border border-secondary/20 font-label-code text-xs font-semibold">
+                  PROJECT 02 // LOGISTICS ENGINE
+                </span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">CAMPUS FACILITY ALLOCATION</span>
+</div>
+<div class="flex items-center gap-3">
+<a class="inline-flex items-center gap-1 font-label-code text-xs text-secondary hover:underline" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>CASE STUDY NOTES</span>
+<span class="material-symbols-outlined text-[14px]">arrow_outward</span>
+</a>
+<span class="text-outline">•</span>
+<a class="inline-flex items-center gap-1 font-label-code text-xs text-on-surface-variant hover:text-on-surface" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[14px]">code</span>
+<span>GITHUB</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-12 gap-gutter-lg items-center">
+<!-- LEFT CALENDAR / WORKFLOW INSPECTOR MOCK -->
+<div class="col-span-12 lg:col-span-6">
+<div class="rounded-xl bg-surface-container-lowest border border-surface-container-high p-5 shadow-lg">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-surface-container-high">
+<span class="font-label-code text-xs text-secondary font-bold">RESERVATION MATRIX // AUDITORIUM_A</span>
+<span class="font-label-code text-[11px] text-outline">OCTOBER 2024</span>
+</div>
+<!-- TIME SLOT GRID -->
+<div class="space-y-2 font-label-code text-xs">
+<div class="p-2.5 rounded bg-surface-container-low border border-surface-container-high flex items-center justify-between">
+<div>
+<span class="text-on-surface font-semibold block">09:30 - 11:30 AM</span>
+<span class="text-[11px] text-outline">IEEE Student Branch Annual Keynote</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-400 text-[10px] font-bold">APPROVED (FACULTY)</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low border border-secondary/40 flex items-center justify-between">
+<div>
+<span class="text-secondary font-semibold block">02:00 - 04:30 PM</span>
+<span class="text-[11px] text-on-surface-variant">Coding Club Hackathon Orientation</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-secondary/20 text-secondary text-[10px] font-bold">PENDING CONFLICT CHECK</span>
+</div>
+<div class="p-2.5 rounded bg-surface-container-low/50 border border-dashed border-surface-container-highest flex items-center justify-between text-outline">
+<span>05:00 - 07:00 PM</span>
+<span class="text-[10px]">SLOT AVAILABLE</span>
+</div>
+</div>
+<!-- WORKFLOW STEPS -->
+<div class="mt-4 pt-3 border-t border-surface-container-high flex items-center justify-between text-[11px] font-label-code">
+<span class="text-outline">STAGE: 2 of 3 (HOD Signoff)</span>
+<span class="text-primary-fixed">Conflict Resolution: Deterministic</span>
+</div>
+</div>
+</div>
+<!-- RIGHT CONTENT & ARCHITECTURE -->
+<div class="col-span-12 lg:col-span-6 flex flex-col justify-center">
+<h3 class="font-headline-xl text-2xl sm:text-3xl font-extrabold text-primary mb-3">
+                  Eventra — Campus Hall &amp; Resource Reservation System
+                </h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-3">
+<strong class="text-on-surface">The Problem:</strong> Student societies constantly experienced double-booked auditoriums and lost paper approval slips between department heads and estate administration.
+                </p>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-4">
+<strong class="text-secondary">The Solution:</strong> Built a streamlined reservation workflow with conflict-checking validation logic, student auth portals, and role-based faculty approval pipelines.
+                </p>
+<div class="p-3 rounded-lg bg-surface-container border border-surface-container-high font-label-code text-xs mb-4">
+<span class="text-outline block uppercase mb-1">Shadha's Role:</span>
+<span class="text-on-surface">Implemented date-range conflict overlap verification in MongoDB queries, student authentication cookies, and responsive booking schedules.</span>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-secondary font-label-code text-xs font-medium">Next.js</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">TypeScript</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">MongoDB</span>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-on-surface font-label-code text-xs font-medium">Tailwind CSS</span>
+</div>
+</div>
+</div>
+</div>
+</article>
+<!-- ================================================================ -->
+<!-- PROJECT 3: RESUME SKILL ANALYZER (TERMINAL / RADAR VISUALIZATION LAYOUT) -->
+<!-- ================================================================ -->
+<article class="rounded-2xl bg-surface-container-low border border-surface-container-highest overflow-hidden shadow-2xl hover:border-tertiary/30 transition-all">
+<div class="p-6 sm:p-8 lg:p-10">
+<div class="grid grid-cols-12 gap-gutter-lg items-center">
+<!-- LEFT DETAILS -->
+<div class="col-span-12 lg:col-span-6 flex flex-col justify-center order-2 lg:order-1">
+<div class="flex items-center gap-3 mb-3">
+<span class="px-3 py-0.5 rounded-full bg-tertiary-container text-tertiary border border-tertiary/20 font-label-code text-xs font-semibold">
+                    PROJECT 03 // NLP EXPERIMENT
+                  </span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">TEXT MATCHING UTILITY</span>
+</div>
+<h3 class="font-headline-xl text-2xl sm:text-3xl font-extrabold text-primary mb-3">
+                  Resume Skill Analyzer — Semantic Keyword &amp; Match Explorer
+                </h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-3">
+<strong class="text-on-surface">The Problem:</strong> Student applicants often don't realize when their resumes miss essential engineering keywords requested by entry-level job descriptions.
+                </p>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed mb-4">
+<strong class="text-tertiary">The Solution:</strong> A lightweight Python + FastAPI utility that ingests candidate PDF text and JD excerpts to highlight skill overlaps, missing keywords, and match percentages.
+                </p>
+<div class="p-3 rounded-lg bg-surface-container border border-surface-container-high font-label-code text-xs mb-5">
+<span class="text-outline block uppercase mb-1">Shadha's Role:</span>
+<span class="text-on-surface">Wrote Python token extraction script, token matching scoring algorithm, and built a clean React frontend for instant visual feedback.</span>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-tertiary text-surface-dim font-label-code text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-opacity" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span>INTERACTIVE DEMO</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+<a class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container hover:bg-surface-container-highest text-on-surface font-label-code text-xs font-medium uppercase tracking-wider transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[16px]">code</span>
+<span>GITHUB REPO</span>
+</a>
+</div>
+</div>
+<!-- RIGHT RADAR / TOKEN BREAKDOWN MOCK -->
+<div class="col-span-12 lg:col-span-6 order-1 lg:order-2">
+<div class="rounded-xl bg-surface-container-lowest border border-surface-container-high p-5 shadow-lg font-label-code">
+<div class="flex items-center justify-between pb-3 mb-3 border-b border-surface-container-high text-xs">
+<span class="text-tertiary font-semibold">$ nlp_parser --run --sample</span>
+<span class="text-outline">TOKEN_MATCH: 84%</span>
+</div>
+<!-- TOKEN NODES -->
+<div class="space-y-3 text-xs">
+<div>
+<span class="text-outline text-[11px] uppercase block mb-1.5">Matched Keywords:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">React.js</span>
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">TypeScript</span>
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">RESTful APIs</span>
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">Git / GitHub</span>
+<span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">PostgreSQL</span>
+</div>
+</div>
+<div>
+<span class="text-outline text-[11px] uppercase block mb-1.5">Suggested Gap Additions:</span>
+<div class="flex flex-wrap gap-1.5">
+<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30">Docker Containers</span>
+<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30">Unit Testing (Jest)</span>
+<span class="px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/30">CI Pipelines</span>
+</div>
+</div>
+<div class="p-3 rounded bg-surface-container-low border border-surface-container-high text-[11px] text-on-surface-variant flex items-center justify-between">
+<span>Engine: FastAPI + spaCy Tokenizer</span>
+<span class="text-tertiary">Latency: ~45ms</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- CHAPTER 03: TECHNICAL REPERTOIRE (MODULAR MATRIX, NO FAKE PERCENTAGES) -->
+<section class="w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg py-space-3xl" id="repertoire">
+<!-- CHAPTER HEADER -->
+<div class="flex items-center gap-space-md mb-space-2xl">
+<span class="px-3.5 py-1 rounded-full bg-surface-container font-label-code text-xs text-primary-fixed uppercase tracking-wider font-semibold">
+        CHAPTER 03 // REPERTOIRE
+      </span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+<span class="font-label-code text-xs text-on-surface-variant uppercase tracking-wider">SKILLS &amp; RADAR</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+<!-- CATEGORY 1: CORE LANGUAGES -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-surface-container-highest flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="p-1.5 rounded bg-surface-container-high text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">LANGUAGES</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-3">Core Languages</h3>
+<ul class="space-y-2 font-label-code text-xs text-on-surface-variant">
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Python</span>
+<span class="text-primary-fixed text-[10px]">Academic &amp; Scripts</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">JavaScript (ES6+)</span>
+<span class="text-primary-fixed text-[10px]">Primary</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">TypeScript</span>
+<span class="text-primary-fixed text-[10px]">Daily Web</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Java &amp; C/C++</span>
+<span class="text-outline text-[10px]">DSA Core</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">SQL</span>
+<span class="text-primary-fixed text-[10px]">Relational</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- CATEGORY 2: FRONTEND & INTERFACES -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-surface-container-highest flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="p-1.5 rounded bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[18px]">web</span>
+</span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">CLIENT SIDE</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-3">Frontend &amp; UI</h3>
+<ul class="space-y-2 font-label-code text-xs text-on-surface-variant">
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">React.js</span>
+<span class="text-secondary text-[10px]">Components/Hooks</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Next.js</span>
+<span class="text-secondary text-[10px]">App Router</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Tailwind CSS</span>
+<span class="text-secondary text-[10px]">Utility First</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">HTML5 / Modern CSS</span>
+<span class="text-outline text-[10px]">Semantic</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Responsive Design</span>
+<span class="text-secondary text-[10px]">Mobile-First</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- CATEGORY 3: BACKEND & STORAGE -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-surface-container-highest flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="p-1.5 rounded bg-surface-container-high text-tertiary">
+<span class="material-symbols-outlined text-[18px]">database</span>
+</span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">SERVER SIDE</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-3">Backend &amp; Data</h3>
+<ul class="space-y-2 font-label-code text-xs text-on-surface-variant">
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Node.js</span>
+<span class="text-tertiary text-[10px]">Runtime</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Express.js</span>
+<span class="text-tertiary text-[10px]">REST Routing</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">PostgreSQL</span>
+<span class="text-tertiary text-[10px]">Schema &amp; Joins</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">MongoDB</span>
+<span class="text-outline text-[10px]">Mongoose</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">FastAPI</span>
+<span class="text-outline text-[10px]">Python APIs</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- CATEGORY 4: TOOLS & WORKFLOW -->
+<div class="p-5 rounded-xl bg-surface-container-low border border-surface-container-highest flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="p-1.5 rounded bg-surface-container-high text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">construction</span>
+</span>
+<span class="font-label-status text-[11px] text-outline uppercase tracking-wider">DEVELOPER GEAR</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-3">Tools &amp; Workflow</h3>
+<ul class="space-y-2 font-label-code text-xs text-on-surface-variant">
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Git &amp; GitHub</span>
+<span class="text-primary-fixed text-[10px]">Branching / PRs</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Linux / Bash</span>
+<span class="text-outline text-[10px]">CLI Environment</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Postman</span>
+<span class="text-primary-fixed text-[10px]">Endpoint Testing</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">VS Code</span>
+<span class="text-outline text-[10px]">Primary IDE</span>
+</li>
+<li class="flex items-center justify-between p-2 rounded bg-surface-container">
+<span class="text-on-surface">Figma Basics</span>
+<span class="text-outline text-[10px]">Wireframing</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- CATEGORY 5: LEARNING RADAR (ACTIVE EXPLORATIONS) -->
+<div class="p-5 rounded-xl bg-surface-container-high border border-primary-fixed/30 flex flex-col justify-between shadow-md">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="p-1.5 rounded bg-surface-container-highest text-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">radar</span>
+</span>
+<span class="font-label-status text-[11px] text-primary-fixed uppercase tracking-wider font-bold">LEARNING RADAR</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-3">Active Horizons</h3>
+<ul class="space-y-2 font-label-code text-xs text-on-surface-variant">
+<li class="p-2 rounded bg-surface-container-lowest/80 border border-primary-fixed/20">
+<div class="text-primary-fixed font-semibold">Docker Fundamentals</div>
+<div class="text-[11px] text-outline mt-0.5">Containerizing Node &amp; Postgres apps</div>
+</li>
+<li class="p-2 rounded bg-surface-container-lowest/80 border border-secondary/20">
+<div class="text-secondary font-semibold">WebSockets &amp; Real-time</div>
+<div class="text-[11px] text-outline mt-0.5">Two-way socket event states</div>
+</li>
+<li class="p-2 rounded bg-surface-container-lowest/80 border border-tertiary/20">
+<div class="text-tertiary font-semibold">Python NLP &amp; spaCy</div>
+<div class="text-[11px] text-outline mt-0.5">Semantic document tokenizers</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 04: STUDENT WORKBENCH & LIVE INTERESTS (PERSONAL DASHBOARD) -->
+<section class="w-full bg-surface-container-lowest/80 border-y border-surface-container-high/60 py-space-3xl" id="workbench">
+<div class="max-w-[1560px] mx-auto px-6 md:px-margin-lg">
+<!-- CHAPTER HEADER -->
+<div class="flex items-center justify-between mb-space-xl">
+<div class="flex items-center gap-space-sm">
+<span class="h-2.5 w-2.5 rounded-full bg-primary-fixed animate-pulse"></span>
+<h2 class="font-headline-md text-xl sm:text-2xl text-primary font-bold tracking-tight">
+            CHAPTER 04 // Student Workbench &amp; Live Headspace
+          </h2>
+</div>
+<span class="font-label-status text-[11px] uppercase text-outline">UPDATED: SEMESTER SESSION</span>
+</div>
+<!-- 4-CARD WORKBENCH HUD -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg">
+<!-- CARD 1 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3 text-xs font-label-code">
+<span class="text-primary-fixed uppercase tracking-wider font-semibold">CURRENTLY BUILDING</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">build_circle</span>
+</div>
+<h4 class="font-headline-md text-lg font-bold text-primary mb-1">EduSphere v2 Features</h4>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+              Adding interactive timed quiz revision sets and refining mobile responsive navigation drawer.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/60 flex items-center justify-between text-[11px] font-label-code text-outline">
+<span>Progress: Active sprint</span>
+<span class="text-primary-fixed">React + Express</span>
+</div>
+</div>
+<!-- CARD 2 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3 text-xs font-label-code">
+<span class="text-secondary uppercase tracking-wider font-semibold">CURRENTLY LEARNING</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">school</span>
+</div>
+<h4 class="font-headline-md text-lg font-bold text-primary mb-1">OS &amp; DB Indexing</h4>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+              Deep diving into B-tree indexing in PostgreSQL, virtual memory paging, and TypeScript advanced generics.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/60 flex items-center justify-between text-[11px] font-label-code text-outline">
+<span>Coursework: B.Tech Sem 7</span>
+<span class="text-secondary">Core CS Theory</span>
+</div>
+</div>
+<!-- CARD 3 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3 text-xs font-label-code">
+<span class="text-tertiary uppercase tracking-wider font-semibold">READING &amp; EXPLORING</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">menu_book</span>
+</div>
+<h4 class="font-headline-md text-lg font-bold text-primary mb-1">DDIA &amp; Web Patterns</h4>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+              Reading selected chapters of <em>Designing Data-Intensive Applications</em> (Storage Engines) &amp; Web accessibility guidelines.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/60 flex items-center justify-between text-[11px] font-label-code text-outline">
+<span>Format: Kleppmann text</span>
+<span class="text-tertiary">Self-study</span>
+</div>
+</div>
+<!-- CARD 4 -->
+<div class="p-6 rounded-xl bg-surface-container-high border border-primary-fixed/40 shadow-lg flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-3 text-xs font-label-code">
+<span class="text-primary-fixed uppercase tracking-wider font-semibold">ACTIVELY SEEKING</span>
+<span class="material-symbols-outlined text-primary-fixed text-[18px]">work</span>
+</div>
+<h4 class="font-headline-md text-lg font-bold text-primary mb-1">SWE Internships 2025</h4>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+              Open to Summer/Fall 2025 Software Engineering Internships and Junior Developer roles with forward-thinking teams.
+            </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/60 flex items-center justify-between text-[11px] font-label-code text-outline">
+<span>Location: Remote / Hybrid</span>
+<span class="text-primary-fixed font-bold">Ready to ship</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 05: INTERACTIVE CONSOLE (STUDENT REPL SIMULATOR) -->
+<section class="w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg py-space-3xl" id="terminal">
+<!-- CHAPTER HEADER -->
+<div class="flex items-center gap-space-md mb-space-2xl">
+<span class="px-3.5 py-1 rounded-full bg-surface-container font-label-code text-xs text-primary-fixed uppercase tracking-wider font-semibold">
+        CHAPTER 05 // INTERACTIVE CONSOLE
+      </span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+<span class="font-label-code text-xs text-on-surface-variant uppercase tracking-wider">STUDENT REPL</span>
+</div>
+<div class="grid grid-cols-12 gap-gutter-lg bg-surface-container-low rounded-2xl border border-surface-container-highest overflow-hidden shadow-2xl">
+<!-- LEFT CONTROL PANEL & MACROS -->
+<div class="col-span-12 lg:col-span-4 p-6 sm:p-8 bg-surface-container border-b lg:border-b-0 lg:border-r border-surface-container-highest flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-3">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">terminal</span>
+<span class="font-label-code text-xs text-primary font-bold">STUDENT_CONSOLE // v1.2</span>
+</div>
+<h3 class="font-headline-md text-xl font-bold text-primary mb-2">Interactive Shell</h3>
+<p class="font-body-md text-xs text-on-surface-variant mb-6 leading-relaxed">
+            Click quick command shortcuts below or type directly into the terminal prompt to query project details, technical skills, or contact info.
+          </p>
+<!-- QUICK MACROS BUTTONS -->
+<div class="space-y-2">
+<span class="font-label-status text-[10px] text-outline uppercase tracking-wider block mb-1">CLICKABLE SHORTCUTS:</span>
+<button class="w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code text-xs flex items-center justify-between group transition-all" onclick="runMacro('projects')" type="button">
+<span>$ projects</span>
+<span class="text-primary-fixed font-bold group-hover:translate-x-1 transition-transform">→</span>
+</button>
+<button class="w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code text-xs flex items-center justify-between group transition-all" onclick="runMacro('skills')" type="button">
+<span>$ skills</span>
+<span class="text-secondary font-bold group-hover:translate-x-1 transition-transform">→</span>
+</button>
+<button class="w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code text-xs flex items-center justify-between group transition-all" onclick="runMacro('about')" type="button">
+<span>$ whoami</span>
+<span class="text-primary-fixed font-bold group-hover:translate-x-1 transition-transform">→</span>
+</button>
+<button class="w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code text-xs flex items-center justify-between group transition-all" onclick="runMacro('contact')" type="button">
+<span>$ contact</span>
+<span class="text-tertiary font-bold group-hover:translate-x-1 transition-transform">→</span>
+</button>
+<button class="w-full text-left px-3.5 py-2.5 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-label-code text-xs flex items-center justify-between group transition-all" onclick="runMacro('clear')" type="button">
+<span>$ clear</span>
+<span class="text-outline font-bold group-hover:translate-x-1 transition-transform">↺</span>
+</button>
+</div>
+</div>
+<div class="mt-8 pt-3 border-t border-surface-container-highest/60 flex items-center justify-between text-outline font-label-code text-xs">
+<span>PORT: 3000 (LOCAL)</span>
+<span class="text-primary-fixed font-medium">STATUS: READY</span>
+</div>
+</div>
+<!-- RIGHT TERMINAL HUD OUTPUT -->
+<div class="col-span-12 lg:col-span-8 p-6 sm:p-8 flex flex-col justify-between font-label-code text-xs min-h-[420px] bg-surface-container-lowest">
+<!-- STATUS BAR -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container-highest/40 text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-error/80"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed-dim/80"></span>
+<span class="w-3 h-3 rounded-full bg-primary-fixed/80"></span>
+<span class="ml-2 text-outline">shadha@portfolio:~$</span>
+</div>
+<span class="text-outline text-[11px]">BASH (WEB_SIMULATOR)</span>
+</div>
+<!-- CONSOLE STREAM VIEW -->
+<div class="py-4 space-y-2 overflow-y-auto max-h-[300px] text-on-surface font-label-code leading-relaxed" id="terminalOutput">
+<p class="text-outline">Terminal simulator loaded. Type <span class="text-primary-fixed">'help'</span> or click any macro on the left.</p>
+<div class="flex items-start gap-2 text-on-surface-variant">
+<span class="text-primary-fixed">&gt;</span>
+<span>Identity: Shadha Shareef • CS Student &amp; Aspiring Software Developer</span>
+</div>
+<div class="flex items-start gap-2 text-on-surface">
+<span class="text-primary-fixed">&gt;</span>
+<span>Target: Seeking 2025 Software Engineering Internships and Junior Developer roles.</span>
+</div>
+</div>
+<!-- COMMAND PROMPT -->
+<form class="mt-4 pt-3 border-t border-surface-container-highest/40 flex items-center gap-2" id="terminalForm" onsubmit="handleTerminalSubmit(event)">
+<span class="text-primary-fixed font-bold text-sm">λ</span>
+<input autocomplete="off" class="w-full bg-transparent text-primary placeholder-outline font-label-code text-xs outline-none focus:ring-0 border-0 p-0" id="terminalInput" placeholder="Type command (e.g. projects, skills, whoami, help)..." type="text"/>
+<button class="px-4 py-1.5 rounded bg-surface-container text-primary-fixed hover:bg-surface-container-high uppercase tracking-wider font-label-code text-xs transition-colors" type="submit">
+            RUN
+          </button>
+</form>
+</div>
+</div>
+</section>
+<!-- CHAPTER 06: DEVELOPMENT TIMELINE (GROWTH CHRONOLOGY & MILESTONES) -->
+<section class="w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg py-space-3xl" id="milestones">
+<!-- CHAPTER HEADER -->
+<div class="flex items-center gap-space-md mb-space-2xl">
+<span class="px-3.5 py-1 rounded-full bg-surface-container font-label-code text-xs text-primary-fixed uppercase tracking-wider font-semibold">
+        CHAPTER 06 // JOURNEY
+      </span>
+<div class="h-px flex-1 bg-surface-container-highest"></div>
+<span class="font-label-code text-xs text-on-surface-variant uppercase tracking-wider">HONEST STUDENT MILESTONES</span>
+</div>
+<!-- 4-STEP HONEST STUDENT TIMELINE -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg relative">
+<!-- STEP 1 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest shadow-md relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-status text-xs text-primary-fixed uppercase tracking-wider font-bold">2022 – 2023</span>
+<span class="material-symbols-outlined text-outline text-[20px]">school</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-2">CS Foundations &amp; Logic</h3>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+            Explored Core Data Structures, Object-Oriented Programming, and algorithmic problem solving in C++ and Python. Implemented basic sorting algorithms, trees, and linked structures.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/50 font-label-code text-[11px] text-outline">
+          MILESTONE: First console apps &amp; university programming labs.
+        </div>
+</div>
+<!-- STEP 2 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest shadow-md relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-status text-xs text-secondary uppercase tracking-wider font-bold">2023 – 2024</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">code</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-2">Web Dev &amp; First Hackathons</h3>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+            Discovered the joy of full-stack development. Built first iterations of Eventra for campus booking, participated in collegiate hackathons, and learned React and Node.js.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/50 font-label-code text-[11px] text-secondary">
+          DELIVERY: Eventra v1 prototype &amp; team hackathon projects.
+        </div>
+</div>
+<!-- STEP 3 -->
+<div class="p-6 rounded-xl bg-surface-container-low border border-surface-container-highest shadow-md relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-status text-xs text-tertiary uppercase tracking-wider font-bold">2024 – 2025</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">layers</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-2">Full-Stack Project Maturation</h3>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+            Architected EduSphere with PostgreSQL relational models, experimented with NLP token parsing in Python for the Resume Skill Analyzer, and focused on clean API design.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/50 font-label-code text-[11px] text-tertiary">
+          DELIVERY: EduSphere campus beta &amp; NLP Resume tool.
+        </div>
+</div>
+<!-- STEP 4 -->
+<div class="p-6 rounded-xl bg-surface-container-high border border-primary-fixed/40 shadow-md relative flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-status text-xs text-primary-fixed uppercase tracking-wider font-bold">2025 – PRESENT</span>
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-base font-bold text-primary mb-2">Ready for Industry Roles</h3>
+<p class="font-body-md text-xs text-on-surface-variant leading-relaxed">
+            Actively seeking Software Engineering Internships and entry-level positions where I can contribute to production software, collaborate with mentors, and grow rapidly.
+          </p>
+</div>
+<div class="mt-4 pt-3 border-t border-surface-container-highest/50 font-label-code text-[11px] text-primary-fixed font-semibold">
+          STATUS: Open to SWE Roles &amp; Placements 2025.
+        </div>
+</div>
+</div>
+</section>
+<!-- CHAPTER 07: HIGH-IMPACT ELECTRIC LIME CONTACT CALLOUT -->
+<section class="w-full max-w-[1560px] mx-auto px-6 md:px-margin-lg py-space-3xl" id="contact">
+<div class="relative w-full rounded-2xl bg-primary-container text-on-primary-container p-8 sm:p-12 lg:p-16 overflow-hidden shadow-[0_0_70px_rgba(195,244,0,0.3)]">
+<!-- TOP ANNOTATION -->
+<div class="flex items-center justify-between font-label-code text-xs mb-8">
+<span class="uppercase tracking-widest font-bold text-on-primary-container/80">CHAPTER 07 // TRANSMISSION CHANNELS</span>
+<span class="hidden sm:inline-block uppercase tracking-wider font-bold">CALICUT, KERALA • OPEN TO REMOTE / RELOCATION</span>
+</div>
+<!-- HEADLINE & THESIS -->
+<div class="max-w-4xl">
+<h2 class="font-display-hero text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight mb-4 text-on-primary-container">
+          READY TO BUILD SOMETHING IMPACTFUL TOGETHER?
+        </h2>
+<p class="font-body-lg text-base sm:text-xl text-on-primary-container/90 max-w-2xl mb-8 leading-relaxed">
+          Whether you have an internship opportunity, an entry-level software engineering opening, or want to discuss student projects—my inbox is always open.
+        </p>
+</div>
+<!-- INTERACTIVE CTAS -->
+<div class="flex flex-wrap items-center gap-4">
+<!-- COPY EMAIL BUTTON -->
+<button class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-lowest text-primary font-label-code text-xs font-bold uppercase tracking-wider hover:bg-surface-dim transition-all shadow-xl group" id="copyEmailBtn" onclick="copyEmailToClipboard()" type="button">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed group-hover:scale-110 transition-transform" id="copyIcon">content_copy</span>
+<span id="emailText">shadha.shareef@example.com</span>
+</button>
+<!-- DIRECT MAILTO LINK -->
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-on-primary-container text-primary-container font-label-code text-xs font-bold uppercase tracking-wider hover:opacity-90 transition-all shadow-md" href="mailto:shadha.shareef@example.com">
+<span>SEND DIRECT EMAIL</span>
+<span class="material-symbols-outlined text-[18px]">send</span>
+</a>
+<!-- RESUME DOWNLOAD -->
+<a class="inline-flex items-center gap-2 px-6 py-3.5 rounded-lg bg-surface-container-high/80 text-on-surface font-label-code text-xs font-bold uppercase tracking-wider hover:bg-surface-container-high transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>CURRICULUM VITAE</span>
+</a>
+<!-- GITHUB / LINKEDIN PILLS -->
+<div class="flex items-center gap-2">
+<a class="p-3 rounded-lg bg-on-primary-container/10 hover:bg-on-primary-container/20 text-on-primary-container transition-colors" href="https://github.com" rel="noopener noreferrer" target="_blank" title="GitHub">
+<span class="material-symbols-outlined text-[20px]">code</span>
+</a>
+<a class="p-3 rounded-lg bg-on-primary-container/10 hover:bg-on-primary-container/20 text-on-primary-container transition-colors" href="https://linkedin.com" rel="noopener noreferrer" target="_blank" title="LinkedIn">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</a>
+</div>
+</div>
+<!-- AMBIENT GEOMETRIC GRAPHIC WATERMARK -->
+<div class="absolute -right-16 -bottom-16 w-80 h-80 rounded-full border-[12px] border-on-primary-container/10 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[130px] text-on-primary-container/10">terminal</span>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="w-full bg-surface-container-lowest border-t border-surface-container-highest/60 py-space-xl">
+<div class="max-w-[1560px] mx-auto px-6 md:px-margin-lg flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex flex-col items-center md:items-start gap-1">
+<div class="flex items-center gap-2">
+<span class="font-display-hero text-sm font-bold text-primary">SHADHA SHAREEF</span>
+<span class="font-label-code text-xs text-outline">//</span>
+<span class="font-label-code text-xs text-on-surface-variant">CS UNDERGRADUATE &amp; SOFTWARE BUILDER</span>
+</div>
+<p class="font-label-code text-[11px] text-outline">
+        Crafted with React concepts, Tailwind CSS &amp; clean semantic web standards.
+      </p>
+</div>
+<div class="flex flex-wrap items-center justify-center md:justify-end gap-6 font-label-code text-xs">
+<div class="flex items-center gap-1.5">
+<span class="h-2 w-2 rounded-full bg-primary-fixed"></span>
+<span class="text-on-surface-variant">KERALA, INDIA</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="text-outline">OPEN TO SWE 2025</span>
+</div>
+<a class="text-secondary hover:underline" href="#about">
+        BACK TO TOP ↑
+      </a>
+</div>
+</div>
+</footer>
+<!-- CLIENT SCRIPTS: KINETIC SANDBOX + INTERACTIVE TERMINAL + CLIPBOARD -->
+<script>
+  // ==========================================
+  // 1. KINETIC PARTICLE SANDBOX METAPHOR
+  // ==========================================
+  (function initSandbox() {
+    const canvas = document.getElementById('sandboxCanvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+    const particleCount = 18;
+    const mouse = { x: null, y: null, maxDist: 100 };
 
-<body>
-  <header class="hero">
-    <h1 id="name"></h1>
-    <p id="tagline"></p>
-    <nav id="links"></nav>
-  </header>
-  <main>
-    <section>
-      <h2>About</h2>
-      <p id="bio"></p>
-    </section>
-    <section>
-      <h2>Skills</h2>
-      <ul id="skills" class="chips"></ul>
-    </section>
-    <section>
-      <h2>Projects</h2>
-      <div id="projects" class="grid"></div>
-    </section>
-  </main>
-  <footer id="footer"></footer>
-  <script src="script.js"></script>
-</body>
+    function resize() {
+      width = canvas.parentElement.clientWidth;
+      height = canvas.parentElement.clientHeight;
+      canvas.width = width;
+      canvas.height = height;
+    }
+    resize();
+    window.addEventListener('resize', resize);
 
-</html>
+    class Particle {
+      constructor() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.vx = (Math.random() - 0.5) * 1.2;
+        this.vy = (Math.random() - 0.5) * 1.2;
+        this.radius = 2.5;
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+        if (this.x < 0 || this.x > width) this.vx *= -1;
+        if (this.y < 0 || this.y > height) this.vy *= -1;
+
+        // Mouse interaction
+        if (mouse.x !== null) {
+          const dx = mouse.x - this.x;
+          const dy = mouse.y - this.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.maxDist) {
+            this.x -= (dx / dist) * 1.5;
+            this.y -= (dy / dist) * 1.5;
+          }
+        }
+      }
+      draw() {
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = '#c3f400';
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(new Particle());
+    }
+
+    canvas.parentElement.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+
+    canvas.parentElement.addEventListener('mouseleave', () => {
+      mouse.x = null;
+      mouse.y = null;
+    });
+
+    function animate() {
+      ctx.clearRect(0, 0, width, height);
+
+      // Draw connection lines
+      for (let i = 0; i < particles.length; i++) {
+        for (let j = i + 1; j < particles.length; j++) {
+          const dx = particles[i].x - particles[j].x;
+          const dy = particles[i].y - particles[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 85) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(particles[j].x, particles[j].y);
+            ctx.strokeStyle = `rgba(195, 244, 0, ${1 - dist / 85 * 0.8})`;
+            ctx.lineWidth = 0.8;
+            ctx.stroke();
+          }
+        }
+      }
+
+      // Connect to mouse
+      if (mouse.x !== null) {
+        for (let i = 0; i < particles.length; i++) {
+          const dx = particles[i].x - mouse.x;
+          const dy = particles[i].y - mouse.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < mouse.maxDist) {
+            ctx.beginPath();
+            ctx.moveTo(particles[i].x, particles[i].y);
+            ctx.lineTo(mouse.x, mouse.y);
+            ctx.strokeStyle = `rgba(221, 183, 255, ${0.9 - dist / mouse.maxDist})`;
+            ctx.lineWidth = 1;
+            ctx.stroke();
+          }
+        }
+      }
+
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
+
+  // ==========================================
+  // 2. EMAIL CLIPBOARD COPY
+  // ==========================================
+  function copyEmailToClipboard() {
+    const email = 'shadha.shareef@example.com';
+    const emailText = document.getElementById('emailText');
+    const copyIcon = document.getElementById('copyIcon');
+
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(email).then(() => {
+        emailText.textContent = 'COPIED TO CLIPBOARD!';
+        copyIcon.textContent = 'check';
+        setTimeout(() => {
+          emailText.textContent = email;
+          copyIcon.textContent = 'content_copy';
+        }, 2200);
+      });
+    } else {
+      emailText.textContent = 'COPIED!';
+      setTimeout(() => {
+        emailText.textContent = email;
+      }, 2000);
+    }
+  }
+
+  // ==========================================
+  // 3. STUDENT REPL / TERMINAL SIMULATOR
+  // ==========================================
+  function appendTerminalMessage(role, text) {
+    const output = document.getElementById('terminalOutput');
+    const row = document.createElement('div');
+    row.className = 'flex items-start gap-2 text-on-surface';
+
+    if (role === 'cmd') {
+      row.innerHTML = `<span class="text-primary-fixed font-bold">&lambda;</span><span class="text-primary-fixed font-semibold">${text}</span>`;
+    } else {
+      row.innerHTML = `<span class="text-outline">&gt;</span><span class="text-on-surface-variant">${text}</span>`;
+    }
+
+    output.appendChild(row);
+    output.scrollTop = output.scrollHeight;
+  }
+
+  function runMacro(command) {
+    if (command === 'projects') {
+      appendTerminalMessage('cmd', 'projects');
+      appendTerminalMessage('res', 'Selected practical projects: [1] EduSphere (Study Hub & Quiz Engine), [2] Eventra (Campus Hall Booking), [3] Resume Skill Analyzer (NLP Job Matcher).');
+    } else if (command === 'skills') {
+      appendTerminalMessage('cmd', 'skills');
+      appendTerminalMessage('res', 'Languages: Python, TypeScript, JavaScript, Java, C++, SQL | Frameworks: React, Next.js, Express, Tailwind CSS | DB: PostgreSQL, MongoDB');
+    } else if (command === 'about') {
+      appendTerminalMessage('cmd', 'whoami');
+      appendTerminalMessage('res', 'Shadha Shareef — Computer Science Engineering Student. Building practical software that solves genuine everyday campus & workflow friction.');
+    } else if (command === 'contact') {
+      appendTerminalMessage('cmd', 'contact');
+      appendTerminalMessage('res', 'Email: shadha.shareef@example.com | LinkedIn: /in/shadhaws | GitHub: /shadhaws');
+    } else if (command === 'clear') {
+      const output = document.getElementById('terminalOutput');
+      output.innerHTML = '<p class="text-outline">Terminal cleared. Type "help" or select a macro shortcut.</p>';
+    }
+  }
+
+  function handleTerminalSubmit(event) {
+    event.preventDefault();
+    const input = document.getElementById('terminalInput');
+    const val = input.value.trim().toLowerCase();
+    if (!val) return;
+
+    appendTerminalMessage('cmd', val);
+
+    if (val === 'clear' || val === 'cls') {
+      runMacro('clear');
+    } else if (val === 'help') {
+      appendTerminalMessage('res', 'Available commands: projects, skills, whoami, contact, clear, date, resume');
+    } else if (val === 'projects') {
+      runMacro('projects');
+    } else if (val === 'skills') {
+      runMacro('skills');
+    } else if (val === 'whoami' || val === 'about') {
+      runMacro('about');
+    } else if (val === 'contact') {
+      runMacro('contact');
+    } else if (val === 'resume') {
+      appendTerminalMessage('res', 'Resume: Shadha_Shareef_Resume.pdf available via download button in header or Chapter 07.');
+    } else if (val === 'date') {
+      appendTerminalMessage('res', new Date().toUTCString());
+    } else {
+      appendTerminalMessage('res', `bash: command not found: "${val}". Type 'help' for available commands.`);
+    }
+
+    input.value = '';
+  }
+</script>
+</body></html>
